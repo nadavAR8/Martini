@@ -1,12 +1,12 @@
 import json
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 import os
+from typing import List, Dict
 
 def find_best_models(query: str, json_path: str = "backend/llm_catalog.json") -> list:
     """
-    Loads the LLM catalog from a JSON file, finds the best matching category 
-    for the given query using cosine similarity, and returns the top 3 models.
+    Loads the LLM catalog from a JSON file and returns the category that best
+    matches the provided query using a simple keyword based approach. The top
+    three models from that category are returned.
 
     :param query: A string describing the user’s intent or use case
     :param json_path: Path to the JSON catalog file (default: "llm_catalog.json")
@@ -21,15 +21,24 @@ def find_best_models(query: str, json_path: str = "backend/llm_catalog.json") ->
 
     categories = list(catalog.keys())
 
-    # Compute similarity between query and category names
-    vectorizer = TfidfVectorizer() 
-    tfidf_matrix = vectorizer.fit_transform([query] + categories)
+    # Basic keyword matching without external dependencies
+    query_lower = query.lower()
 
-    query_vec = tfidf_matrix[0]
-    category_vecs = tfidf_matrix[1:]
+    keyword_map: Dict[str, List[str]] = {
+        "coding": ["code", "coding", "programming", "python", "developer"],
+        "physics": ["physics", "quantum", "science", "atom", "space"],
+        "medicine": ["medicine", "medical", "clinical", "health", "hospital"],
+    }
 
-    similarities = cosine_similarity(query_vec, category_vecs).flatten()
-    best_category = categories[similarities.argmax()]
+    scores = {}
+    for category in categories:
+        keywords = keyword_map.get(category, [category])
+        scores[category] = sum(query_lower.count(word) for word in keywords)
 
-    return {"catagory": best_category, "models": catalog[best_category][:3]}  # Return top 3 models
+    best_category = max(scores, key=scores.get)
+
+    return {
+        "catagory": best_category,
+        "models": catalog[best_category][:3],
+    }
 

@@ -1,0 +1,83 @@
+{
+    "coding": [
+        {
+            "model_name": "WizardCoder-Python-34B",
+            "stars_ranking": 4.5,
+            "number_of_downloads": 25000
+        },
+        {
+            "model_name": "CodeGeeX2-6B",
+            "stars_ranking": 4.0,
+            "number_of_downloads": 18000
+        },
+        {
+            "model_name": "ReplitCode-v1.5-3B",
+            "stars_ranking": 3.5,
+            "number_of_downloads": 12000
+        },
+        {
+            "model_name": "DeepSeek-Coder-33B",
+            "stars_ranking": 5.0,
+            "number_of_downloads": 32000
+        },
+        {
+            "model_name": "Phind-CodeLlama-34B",
+            "stars_ranking": 4.8,
+            "number_of_downloads": 29000
+        }
+    ],
+    "physics": [
+        {
+            "model_name": "Galactica-30B",
+            "stars_ranking": 4.0,
+            "number_of_downloads": 15000
+        },
+        {
+            "model_name": "PhysLLM-7B",
+            "stars_ranking": 3.5,
+            "number_of_downloads": 7000
+        },
+        {
+            "model_name": "SciPhi-Mistral-7B",
+            "stars_ranking": 4.5,
+            "number_of_downloads": 11000
+        },
+        {
+            "model_name": "OpenHermes-Physics-2.5",
+            "stars_ranking": 4.2,
+            "number_of_downloads": 9500
+        },
+        {
+            "model_name": "LLaMA-Physics-Tuned",
+            "stars_ranking": 4.8,
+            "number_of_downloads": 21000
+        }
+    ],
+    "medicine": [
+        {
+            "model_name": "MedAlpaca-13B",
+            "stars_ranking": 4.7,
+            "number_of_downloads": 17000
+        },
+        {
+            "model_name": "ClinicalCamel-7B",
+            "stars_ranking": 4.2,
+            "number_of_downloads": 8000
+        },
+        {
+            "model_name": "PMC-LLaMA-13B",
+            "stars_ranking": 4.6,
+            "number_of_downloads": 15500
+        },
+        {
+            "model_name": "GatorTron-OG",
+            "stars_ranking": 3.8,
+            "number_of_downloads": 6000
+        },
+        {
+            "model_name": "BioMistral-7B",
+            "stars_ranking": 4.3,
+            "number_of_downloads": 9000
+        }
+    ]
+}

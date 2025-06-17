@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
 
-def find_best_models(query: str, json_path: str = "backend/llm_catalog.json") -> list:
+def find_best_models(query: str, json_path: str = "llm_catalog.json") -> list:
     """
     Loads the LLM catalog from a JSON file, finds the best matching category 
     for the given query using cosine similarity, and returns the top 3 models.
@@ -33,3 +33,8 @@ def find_best_models(query: str, json_path: str = "backend/llm_catalog.json") ->
 
     return {"catagory": best_category, "models": catalog[best_category][:3]}  # Return top 3 models
 
+if __name__ == "__main__":
+    import sys
+    query = sys.argv[1]
+    result = find_best_models(query)
+    print(json.dumps(result))  # Ensure it prints to stdout

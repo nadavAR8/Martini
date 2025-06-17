@@ -18,7 +18,7 @@ function SearchBar({ onSearch }: SearchBarProps) {
     <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
       <input
         type="text"
-        placeholder="Type here...!!"
+        placeholder="Type here..."
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         style={{ padding: '10px', fontSize: '16px', width: '300px' }}

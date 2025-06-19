@@ -1,37 +1,64 @@
-import json
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+from sentence_transformers import SentenceTransformer, util
+import json, os
+
 import os
+import json
 
-def find_best_models(query: str, json_path: str = "llm_catalog.json") -> list:
-    """
-    Loads the LLM catalog from a JSON file, finds the best matching category 
-    for the given query using cosine similarity, and returns the top 3 models.
+def load_catalog(json_path: str = "llm_catalog.json") -> dict:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    catalog_path = os.path.join(script_dir, json_path)
 
-    :param query: A string describing the user’s intent or use case
-    :param json_path: Path to the JSON catalog file (default: "llm_catalog.json")
-    :return: List of top 3 matching model dictionaries
-    """
-    # Load catalog from JSON
-    if not os.path.exists(json_path):
-        raise FileNotFoundError(f"Catalog file not found: {json_path}")
-    
-    with open(json_path, "r") as f:
+    if not os.path.exists(catalog_path):
+        raise FileNotFoundError(f"Catalog file not found at: {catalog_path}")
+
+    with open(catalog_path, "r") as f:
         catalog = json.load(f)
 
-    categories = list(catalog.keys())
+    return catalog
 
-    # Compute similarity between query and category names
-    vectorizer = TfidfVectorizer() 
-    tfidf_matrix = vectorizer.fit_transform([query] + categories)
 
-    query_vec = tfidf_matrix[0]
-    category_vecs = tfidf_matrix[1:]
+def get_best_matching_category(query: str, categories: list[str]) -> str:
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    query_embedding = model.encode(query, convert_to_tensor=True)
+    category_embeddings = model.encode(categories, convert_to_tensor=True)
 
-    similarities = cosine_similarity(query_vec, category_vecs).flatten()
-    best_category = categories[similarities.argmax()]
+    similarities = util.pytorch_cos_sim(query_embedding, category_embeddings).squeeze()
+    best_index = similarities.argmax().item()
 
-    return {"catagory": best_category, "models": catalog[best_category][:3]}  # Return top 3 models
+    print("\n🔍 Category Similarity Scores:")
+    for category, score in zip(categories, similarities):
+        print(f"{category}: {score.item():.4f}")
+
+    return categories[best_index]
+
+
+
+def find_best_models(query: str, json_path: str = "llm_catalog.json", top_n: int = 3) -> dict:
+    catalog = load_catalog(json_path)
+    models = catalog["models"]
+
+    # Build unique category list
+    unique_categories = sorted({
+        category
+        for model in models
+        for category in model.get("categories", [])
+    })
+
+    # Semantic category matching
+    best_category = get_best_matching_category(query, unique_categories)
+
+    # Get top 3 models in best category by Bayesian score
+    filtered_models = [
+        m for m in models if best_category in m.get("categories", [])
+    ]
+    top_models = sorted(filtered_models, key=lambda m: m.get("bayesian_score", 0), reverse=True)[:top_n]
+
+    return {
+        "category": best_category,
+        "models": top_models
+    }
+
+
 
 if __name__ == "__main__":
     import sys

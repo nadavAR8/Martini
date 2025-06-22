@@ -1,0 +1,33 @@
+{
+    "price_per_call": [
+        0.001,
+        0.02
+    ],
+    "num_parameters": [
+        1000000000,
+        13000000000
+    ],
+    "context_window": [
+        2048,
+        16000
+    ],
+    "supports_fine_tuning": true,
+    "open_source": true,
+    "gpu_memory_requirement": [
+        8,
+        40
+    ],
+    "company": [
+        "OpenAI",
+        "Meta",
+        "Google",
+        "Anthropic",
+        "Cohere",
+        "Mistral",
+        "NVIDIA",
+        "Microsoft",
+        "Alibaba",
+        "Amazon"
+    ],
+    "huggingface": true
+}

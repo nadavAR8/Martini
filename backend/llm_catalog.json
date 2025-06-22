@@ -1,143 +1,958 @@
 {
-    "models": [
-        {
-            "model_name": "LLaMA-3-8B",
-            "stars_ranking": 4.5,
-            "number_of_ratings": 30000,
-            "categories": [
-                "coding & programming"
-            ],
-            "bayesian_score": 4.4308
-        },
-        {
-            "model_name": "DeepSeek-Coder-33B",
-            "stars_ranking": 5.0,
-            "number_of_ratings": 25000,
-            "categories": [
-                "coding & programming"
-            ],
-            "bayesian_score": 4.7781
-        },
-        {
-            "model_name": "CodeLlama-34B-Instruct",
-            "stars_ranking": 4.0,
-            "number_of_ratings": 18000,
-            "categories": [
-                "coding & programming"
-            ],
-            "bayesian_score": 4.0797
-        },
-        {
-            "model_name": "Phind-CodeLlama",
-            "stars_ranking": 4.5,
-            "number_of_ratings": 22000,
-            "categories": [
-                "coding & programming"
-            ],
-            "bayesian_score": 4.4135
-        },
-        {
-            "model_name": "Replit-Code-v1.5",
-            "stars_ranking": 3.5,
-            "number_of_ratings": 9000,
-            "categories": [
-                "coding & programming"
-            ],
-            "bayesian_score": 3.8806
-        },
-        {
-            "model_name": "Galactica-30B",
-            "stars_ranking": 4.0,
-            "number_of_ratings": 15000,
-            "categories": [
-                "physics"
-            ],
-            "bayesian_score": 4.0893
-        },
-        {
-            "model_name": "SciPhi-Mistral-7B",
-            "stars_ranking": 4.5,
-            "number_of_ratings": 12000,
-            "categories": [
-                "physics"
-            ],
-            "bayesian_score": 4.3742
-        },
-        {
-            "model_name": "PhysLLM-7B",
-            "stars_ranking": 3.0,
-            "number_of_ratings": 8000,
-            "categories": [
-                "physics"
-            ],
-            "bayesian_score": 3.6796
-        },
-        {
-            "model_name": "LLaMA-Physics-Tuned",
-            "stars_ranking": 4.5,
-            "number_of_ratings": 20000,
-            "categories": [
-                "physics"
-            ],
-            "bayesian_score": 4.4077
-        },
-        {
-            "model_name": "OpenHermes-2.5-Physics",
-            "stars_ranking": 4.0,
-            "number_of_ratings": 11000,
-            "categories": [
-                "physics"
-            ],
-            "bayesian_score": 4.1063
-        },
-        {
-            "model_name": "MedAlpaca-13B",
-            "stars_ranking": 4.5,
-            "number_of_ratings": 17000,
-            "categories": [
-                "medical & health"
-            ],
-            "bayesian_score": 4.3975
-        },
-        {
-            "model_name": "PMC-LLaMA",
-            "stars_ranking": 4.0,
-            "number_of_ratings": 15500,
-            "categories": [
-                "medical & health"
-            ],
-            "bayesian_score": 4.0875
-        },
-        {
-            "model_name": "ClinicalCamel-2",
-            "stars_ranking": 3.5,
-            "number_of_ratings": 10000,
-            "categories": [
-                "medical & health"
-            ],
-            "bayesian_score": 3.8616
-        },
-        {
-            "model_name": "GatorTron-OG",
-            "stars_ranking": 3.0,
-            "number_of_ratings": 7000,
-            "categories": [
-                "medical & health"
-            ],
-            "bayesian_score": 3.7195
-        },
-        {
-            "model_name": "BioMistral-7B",
-            "stars_ranking": 4.0,
-            "number_of_ratings": 9000,
-            "categories": [
-                "medical & health"
-            ],
-            "bayesian_score": 4.1175
-        }
-    ],
-    "global_stats": {
-        "total_ratings": 228500,
-        "global_avg_rating": 4.2232
+  "models": [
+    {
+      "model_name": "CodeLlama-70B-Instruct",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 16674,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 3.7299,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Microsoft"
+      }
+    },
+    {
+      "model_name": "WizardCoder-Python-34B",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 14108,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 4.3642,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Alibaba"
+      }
+    },
+    {
+      "model_name": "StarCoder2-15B",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 17914,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 4.2732,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "NVIDIA"
+      }
+    },
+    {
+      "model_name": "Phind-CodeLlama-34B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 29519,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 4.4947,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "Replit-Code-v1.5",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 25290,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 4.7241,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Meta"
+      }
+    },
+    {
+      "model_name": "DeepSeek-Coder-33B",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 29399,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 4.6372,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Anthropic"
+      }
+    },
+    {
+      "model_name": "OctoCoder-7B",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 24103,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 3.9401,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Alibaba"
+      }
+    },
+    {
+      "model_name": "CodeGeeX2-6B",
+      "stars_ranking": 4.5,
+      "number_of_ratings": 18467,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 4.4635,
+      "advanced_filters": {
+        "price_per_call": 0.0025,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "NVIDIA"
+      }
+    },
+    {
+      "model_name": "SafeCoder-33B",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 23904,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 3.987,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": false,
+        "company": "Microsoft"
+      }
+    },
+    {
+      "model_name": "Gemini-Code-1.5",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 21541,
+      "categories": [
+        "coding & programming"
+      ],
+      "bayesian_score": 4.0673,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": false,
+        "company": "Meta"
+      }
+    },
+    {
+      "model_name": "Galactica-30B",
+      "stars_ranking": 4.5,
+      "number_of_ratings": 12426,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 4.3102,
+      "advanced_filters": {
+        "price_per_call": 0.0025,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "NVIDIA"
+      }
+    },
+    {
+      "model_name": "SciPhi-Mistral-7B",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 24155,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 4.4969,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "NVIDIA"
+      }
+    },
+    {
+      "model_name": "LLaMA-Physics-Tuned",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 22364,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 3.896,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "OpenAI"
+      }
+    },
+    {
+      "model_name": "PhysLLM-7B",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 22088,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 4.7671,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "OpenHermes-Physics",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 23009,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 4.425,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "OpenAI"
+      }
+    },
+    {
+      "model_name": "Phi-2-Physics",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 28876,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 4.0818,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": false,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "Grok-Physics-13B",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 24234,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 4.502,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Google"
+      }
+    },
+    {
+      "model_name": "Qwen-Physics-7B",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 14150,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 4.5449,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "MetaPhysNet-13B",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 15451,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 3.9778,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Meta"
+      }
+    },
+    {
+      "model_name": "Gemma-Physics",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 26653,
+      "categories": [
+        "physics"
+      ],
+      "bayesian_score": 4.7283,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "MedAlpaca-13B",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 14870,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 3.7235,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Anthropic"
+      }
+    },
+    {
+      "model_name": "PMC-LLaMA",
+      "stars_ranking": 4.5,
+      "number_of_ratings": 27884,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 4.4085,
+      "advanced_filters": {
+        "price_per_call": 0.0025,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Alibaba"
+      }
+    },
+    {
+      "model_name": "ClinicalCamel-2",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 21614,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 4.5969,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "GatorTron-OG",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 16652,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 3.7468,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "NVIDIA"
+      }
+    },
+    {
+      "model_name": "BioMistral-7B",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 22125,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 4.0369,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": false,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "Hippocratic-13B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 25150,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 4.4166,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "NVIDIA"
+      }
+    },
+    {
+      "model_name": "MedGemma-2B",
+      "stars_ranking": 4.5,
+      "number_of_ratings": 14886,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 4.182,
+      "advanced_filters": {
+        "price_per_call": 0.0025,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Anthropic"
+      }
+    },
+    {
+      "model_name": "HealthGPT-7B",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 28270,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 3.8388,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "OpenAI"
+      }
+    },
+    {
+      "model_name": "NVIDIA-MedLM",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 10991,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 4.0833,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Amazon"
+      }
+    },
+    {
+      "model_name": "MediQwen-14B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 10349,
+      "categories": [
+        "medical & health"
+      ],
+      "bayesian_score": 3.7611,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Cohere"
+      }
+    },
+    {
+      "model_name": "MathCoder-7B",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 16463,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.6677,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "OpenAI"
+      }
+    },
+    {
+      "model_name": "OpenMath-13B",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 8309,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.2722,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Cohere"
+      }
+    },
+    {
+      "model_name": "MathGPT-6B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 11284,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.5906,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Alibaba"
+      }
+    },
+    {
+      "model_name": "DeepSeek-Math-7B",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 25810,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.4367,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Alibaba"
+      }
+    },
+    {
+      "model_name": "Qwen-Math-14B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 24480,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.5914,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Alibaba"
+      }
+    },
+    {
+      "model_name": "Gemma-Math",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 15624,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.7112,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "OpenAI"
+      }
+    },
+    {
+      "model_name": "MiniMath-2B",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 12597,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.7965,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "WizardMath-13B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 18852,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.5674,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": false,
+        "company": "Meta"
+      }
+    },
+    {
+      "model_name": "MathCamel-7B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 18269,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 4.754,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": false,
+        "company": "Anthropic"
+      }
+    },
+    {
+      "model_name": "Mistral-Math",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 15566,
+      "categories": [
+        "mathematic"
+      ],
+      "bayesian_score": 3.7498,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Meta"
+      }
+    },
+    {
+      "model_name": "FinGPT-13B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 10666,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 4.5175,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 13000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 40,
+        "huggingface": true,
+        "company": "Anthropic"
+      }
+    },
+    {
+      "model_name": "BloombergGPT",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 9285,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 4.2136,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": false,
+        "company": "Microsoft"
+      }
+    },
+    {
+      "model_name": "OpenFin-7B",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 17259,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 4.3882,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Cohere"
+      }
+    },
+    {
+      "model_name": "FinanceLLaMA",
+      "stars_ranking": 4.0,
+      "number_of_ratings": 21125,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 3.7803,
+      "advanced_filters": {
+        "price_per_call": 0.003,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Cohere"
+      }
+    },
+    {
+      "model_name": "Mistral-Finance-7B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 20434,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 4.2966,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": false,
+        "company": "Mistral"
+      }
+    },
+    {
+      "model_name": "FinBERT",
+      "stars_ranking": 3.5,
+      "number_of_ratings": 9335,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 4.2786,
+      "advanced_filters": {
+        "price_per_call": 0.0035,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "NVIDIA"
+      }
+    },
+    {
+      "model_name": "Qwen-Fin-7B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 23302,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 3.7797,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Meta"
+      }
+    },
+    {
+      "model_name": "LLaMA-Finance-8B",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 9306,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 4.4313,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Alibaba"
+      }
+    },
+    {
+      "model_name": "Gemma-Finance",
+      "stars_ranking": 3.0,
+      "number_of_ratings": 13955,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 4.1329,
+      "advanced_filters": {
+        "price_per_call": 0.004,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": false,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": true,
+        "company": "Cohere"
+      }
+    },
+    {
+      "model_name": "NVIDIA-FinLM",
+      "stars_ranking": 5.0,
+      "number_of_ratings": 16395,
+      "categories": [
+        "finance"
+      ],
+      "bayesian_score": 4.1991,
+      "advanced_filters": {
+        "price_per_call": 0.002,
+        "num_parameters": 7000000000,
+        "context_window": 8192,
+        "supports_fine_tuning": true,
+        "open_source": true,
+        "gpu_memory_requirement": 16,
+        "huggingface": false,
+        "company": "Anthropic"
+      }
     }
+  ],
+  "global_stats": {
+    "total_ratings": 945432,
+    "global_avg_rating": 4.0318
+  }
 }

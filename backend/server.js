@@ -11,6 +11,10 @@ app.use(json());
 app.post('/choose-llm', (req, res) => {
   const query = req.body.query;
 
+  if (!query) {
+    return res.status(400).json({ error: 'Missing query in request body' });
+  }
+
   const pyProcess = spawn('python', ['find_best_models.py', query]);
 
   let result = '';
@@ -29,9 +33,9 @@ app.post('/choose-llm', (req, res) => {
 
     try {
       const parsed = JSON.parse(result);
-      const namesOnly = parsed.models.map(m => m.model_name);
-      res.json({ llms: namesOnly });
+      res.json(parsed); // return full category and model info
     } catch (e) {
+      console.error('Failed to parse Python output:', e);
       res.status(500).json({ error: 'Invalid output from Python script' });
     }
   });

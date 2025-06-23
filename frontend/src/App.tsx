@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar';
 import LLMResults from './components/LLMResults';
 
 function App() {
+  const [category, setCategory] = useState<string | null>(null);
   const [llms, setLlms] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -11,6 +12,8 @@ function App() {
   const handleSearch = async (query: string) => {
     setIsLoading(true);
     setError(null);
+    setLlms([]);        // Clear previous results
+    setCategory(null);  // Clear previous category
 
     try {
       const response = await fetch('http://localhost:5000/choose-llm', {
@@ -26,14 +29,17 @@ function App() {
       }
 
       const data = await response.json();
-      setLlms(data.llms);
+      const modelNames = data.models.map((model: any) => model.model_name);
+      setLlms(modelNames);
+      setCategory(data.category);
     } catch (err) {
       console.error('Error fetching LLMs:', err);
       setError('Failed to fetch LLMs. Please try again later.');
     } finally {
       setIsLoading(false);
     }
-  };
+};
+
 
   return (
     <div className="App">
@@ -41,7 +47,7 @@ function App() {
       <SearchBar onSearch={handleSearch} />
       {isLoading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <LLMResults llms={llms} />
+      <LLMResults llms={llms} category={category} />
     </div>
   );
 }

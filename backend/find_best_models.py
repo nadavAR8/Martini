@@ -25,9 +25,9 @@ def get_best_matching_category(query: str, categories: list[str]) -> str:
     similarities = util.pytorch_cos_sim(query_embedding, category_embeddings).squeeze()
     best_index = similarities.argmax().item()
 
-    print("\n🔍 Category Similarity Scores:")
-    for category, score in zip(categories, similarities):
-        print(f"{category}: {score.item():.4f}")
+    # print("\n🔍 Category Similarity Scores:")
+    # for category, score in zip(categories, similarities):
+    #    print(f"{category}: {score.item():.4f}")
 
     return categories[best_index]
 
